@@ -4,7 +4,7 @@ var buf = require('buffer');
 
 var app = express.createServer(express.logger());
 
-var contents = fs.readFileAsync('./index.hrtml');
+var contents = fs.readFileAsync('./index.html');
 
 app.get('/', function(request, response) {
   response.send(contents.toString());
