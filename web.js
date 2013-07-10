@@ -4,11 +4,12 @@ var buf = require('buffer');
 
 var app = express.createServer(express.logger());
 
-//var contents = fs.readFileAsync('index.html');
-var buffer = new Buffer('test');
+var contents = fs.readFileSync('index.html');
+//var buffer = new Buffer('test');
 
 app.get('/', function(request, response) {
-  response.send(buffer.toString());
+//  response.send(buffer.toString());
+  response.send(contents.toString());
 //  response.send('Hello World 2!');
 });
 
