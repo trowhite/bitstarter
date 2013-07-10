@@ -4,11 +4,12 @@ var buf = require('buffer');
 
 var app = express.createServer(express.logger());
 
-var contents = fs.readFileAsync('index.html');
+//var contents = fs.readFileAsync('index.html');
+var buffer = new Buffer('test');
 
 app.get('/', function(request, response) {
-//  response.send(contents.toString());
-  response.send('Hello World 2!');
+  response.send(contents.toString());
+//  response.send('Hello World 2!');
 });
 
 var port = process.env.PORT || 5000;
