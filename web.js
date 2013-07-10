@@ -8,7 +8,7 @@ var app = express.createServer(express.logger());
 var buffer = new Buffer('test');
 
 app.get('/', function(request, response) {
-  response.send(contents.toString());
+  response.send(buffer.toString());
 //  response.send('Hello World 2!');
 });
 
